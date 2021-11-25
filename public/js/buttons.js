@@ -18,3 +18,4 @@ function checkpulsed() {
     }    
 }
  
+// check esto https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/
