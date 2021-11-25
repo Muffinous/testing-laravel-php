@@ -12,5 +12,9 @@ btn.onclick = function() {
     checkpulsed();
 }
 
-
+function checkpulsed() {
+    if (pulsed) {
+        content.style.cssText += 'z-Index : -1';
+    }    
+}
  
