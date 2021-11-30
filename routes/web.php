@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +17,13 @@ Route::get('/', function () {
     return view('init');
 });
 
-Route::get('/about', function () {
-    return "hiya about";
+Route::get('/join', 'App\Http\Controllers\MainController@index');
+Route::post('/main/login', 'App\Http\Controllers\MainController@login');
+
+Route::get('/test', 'App\Http\Controllers\MainController@index2');
+
+Route::post('/index2', function () {
+    return view('welcome');
 });
 
 Route::get('/contact', function () {
@@ -34,6 +39,3 @@ Route::get('admin/posts/example', array('admin.home', function() {
 
     return "this is ". $url;
 }));
-
-Route::get('/login', function () {
-return view('login');})->name('login');
